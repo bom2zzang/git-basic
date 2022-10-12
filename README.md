@@ -62,4 +62,41 @@
 
   // 브랜치 합치기
   git merge 브랜치명
+
+  // 브랜치 삭제
+  git branch -d 브랜치명 // 병합이 완료된 브랜치 삭제
+  git branch -D 브랜치명 // 병합하지 않은 브랜치 삭제
+  ```
+
+- merge conflict
+
+  ```
+  // 1. 충돌 코드 제거
+  // 2. 스테이징
+  git add 파일명
+  // 3. 커밋
+  git commit -m '메세지'
+  ```
+
+- rebase and merge
+
+  - 브랜치의 시작점을 다른 커밋으로 옮겨주는 행위
+  - 브랜치끼리 차이가 많으면 충돌이 발생할 수 있음
+
+  ```
+  // 1. 새로운 브랜치로 이동하여 rebase
+  git switch 새브랜치
+  git rebase main
+
+  // 2. 브랜치가 main 끝으로 이동한 상태에서 merge
+  git switch main
+  git merge 새브랜치
+  ```
+
+- squash and merge
+  - 새 브랜치에 있던 코드 변경사항들이 main브랜치로 텔레포트
+  ```
+  git switch main
+  git merge --squash 브랜치명
+  git commit -m '메세지'
   ```
