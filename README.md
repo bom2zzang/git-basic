@@ -10,7 +10,7 @@
   git add .
   ```
 
-- 상태창
+- 상태확인
 
   ```
   git status
@@ -46,8 +46,22 @@
   // 과거 특정 커밋2개의 차이점 비교
   git diff 커밋id1 커밋id2
 
-  // 보기 좋게 비교
+  // 보기 좋게 비교 - 하지만 불편함
   git difftool
   ```
 
--
+- branch
+
+  ```
+  // 브랜치 생성
+  git branch 브랜치명
+
+  // 브랜치로 이동
+  git switch 브랜치명 // (요즘)
+  git checkout 브랜치명 // (과거)
+
+  // 브랜치 합치기
+  git merge 브랜치명
+  ```
+
+  67 충돌 만들기
